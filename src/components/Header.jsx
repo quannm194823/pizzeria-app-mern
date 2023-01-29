@@ -2,6 +2,7 @@ import React from 'react'
 import foody from "../assets/images/foody.png"
 import cartIcon from "../assets/icons/cart.svg";
 import { Link } from 'react-router-dom';
+
 export const Header = () => {
   return (
     <nav id="header" className="bg-black text-white">

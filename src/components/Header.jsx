@@ -16,11 +16,11 @@ export const Header = () => {
                 <Link to="/" className="text-xl">Home</Link>
                 <Link to="#about" className="text-xl">About</Link>
             </div>
-            <div className='flex items-center justify-content space-x-4'>
+            <div className='flex items-center justify-center space-x-4'>
                 <Link to="/cart" className="mr-4 relative">
                     <img src={cartIcon} alt="cart"/>
                 </Link>
-                <Link to="/sig-in">Log In</Link>
+                <Link to="/sign-in">Log In</Link>
                 <Link to="/sign-up">Sign Up</Link>
             </div>
         </div>

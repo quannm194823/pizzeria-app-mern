@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 import { cartProducts } from "../stores/cart/cartSlice";
 
 const Navigation = () => {
-    const productIncart = useSelector(cartProducts)
+    const productsInCart = useSelector(cartProducts)
 
     return (
         <BrowserRouter>

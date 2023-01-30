@@ -14,7 +14,7 @@ export const Tabs = ({ list, activeTab, onTabSwitch}) => {
                             index={index}
                             active={active === item}
                             setActive={onTabSwitch}
-                            />
+                        />
                     )
                 })}
             </div>

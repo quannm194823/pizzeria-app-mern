@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProducts, selectAllProducts } from "../../stores/menu/productsSlice";
+import { fetchProducts, getProducts, selectAllProducts } from "../../stores/menu/productsSlice";
 import ProductDetailCard from "../../components/ProductDetailCard";
 import { Tabs } from "../../components/Tabs";
 import { addToCart } from "../../stores/cart/cartSlice";
+import { cartProducts } from "../../stores/cart/cartSlice";
 
 const Menu = () => {
     const dispatch = useDispatch();
+    const cart = useSelector(cartProducts)
     const products = useSelector(selectAllProducts);
     const [activeTab, setActiveTab] = useState('');
     const [activeTabIndex, setActiveTabIndex] = useState(0);

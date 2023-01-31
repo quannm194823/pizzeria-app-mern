@@ -6,11 +6,10 @@ import useTabSwitch from "../../hooks/useTabSwitch";
 import { ReactComponent as ArrowRightSvg } from "../../assets/icons/arrow-right-long-svgrepo-com.svg";
 import { AddressForm } from "../../components/AddressForm";
 import { ProductsSummary } from "../../components/ProductsSummary";
-// import { StripeWrapper } from "../../components/PaymentForm";
-
+import { StripeWrapper } from "../../components/PaymentForm";
 const Cart = () => {
     const cart = useSelector(cartProducts);
-    const tabs = ['Summary', 'Delivery', 'Payment'];
+    const tabs= ['Summary', 'Delivery', 'Payment'];
     const [currentTab, handleTabSwitch] = useTabSwitch(tabs, 'Summary');
 
     if (!cart || cart.length === 0) {
@@ -25,7 +24,7 @@ const Cart = () => {
         <div className="bg-white h-screen text-black mx-auto mt-2 border border-gray-200 p-4 md:w-2/3 rounded-lg shadow-md sm:p-6 lg:p-8">
             <Tabs list={tabs} onTabSwitch={handleTabSwitch} activeTab={currentTab} />
             <div className={`tabs ${currentTab !== 'Summary' ? 'hidden' : ''}`}>
-                <ProductsSummary/>
+                <ProductsSummary />
                 <div className="flex justify-end p-2">
                     <Button variant="dark" className="flex items-center" onClick={()=>handleTabSwitch('Delivery')}><span className="mr-1">Next</span><ArrowRightSvg /></Button>
                 </div>
@@ -34,7 +33,7 @@ const Cart = () => {
                 <AddressForm onTabSwitch={handleTabSwitch}/>
             </div>
             <div className={`tabs ${currentTab !== 'Payment' ? 'hidden' : ''}`}>
-                Payment
+                <StripeWrapper />
             </div>
         </div>
     )

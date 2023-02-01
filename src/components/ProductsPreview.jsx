@@ -5,6 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { useDispatch } from "react-redux";
 import { addToCart } from "../stores/cart/cartSlice";
 
+
 export const ProductsPreview = () => {
     const [products, setProducts] = useState([]);
     const dispatch = useDispatch();

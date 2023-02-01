@@ -55,8 +55,8 @@ export const Header = ({ cartCount }) => {
                         <Button onClick={handleLogout}>Log Out</Button> : 
                         (
                             <>
-                             <Link to="/login">Log In</Link>
-                             <Link to="/register">Sign Up</Link>
+                             <Link to="/sign-in">Log In</Link>
+                             <Link to="/sign-up">Sign Up</Link>
                             </>
                         )
                     }
